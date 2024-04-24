@@ -1,3 +1,37 @@
+body {
+  background-color: lightgrey;
+}
+
+.card {
+  background-color: inherit;
+}
+
+/*.card-body {
+  background-color: #3c3054;
+}
+
+.card-list {
+  background-color: #3c3054;
+}*/
+
+.rarity-5stars {
+  background: linear-gradient(180deg, #885550, #c9a36a 53%) !important;
+}
+
+.character-info {
+  background: inherit;
+  border-width: 1px 0 0 0 !important;
+}
+
 .splash {
-  transform: scale(1.5);
+  transform: scale(4);
+  transform-origin: 50% 20%;
+}
+.img-container {
+  overflow: hidden;
+}
+
+.icon {
+  width: 50px;
+  border-radius: 50%;
 }
