@@ -18,20 +18,120 @@ body {
   background: linear-gradient(180deg, #885550, #c9a36a 53%) !important;
 }
 
+.rarity-4stars {
+  background: linear-gradient(180deg, #343659, #8a5fcc 53%) !important;
+}
+
 .character-info {
   background: inherit;
   border-width: 1px 0 0 0 !important;
 }
 
-.splash {
-  transform: scale(4);
-  transform-origin: 50% 20%;
-}
 .img-container {
   overflow: hidden;
 }
 
 .icon {
-  width: 50px;
+  width: 40px;
   border-radius: 50%;
+}
+
+.splash {
+  transform: scale(4);
+}
+
+.acheron .splash {
+  transform-origin: 50% 20%;
+}
+
+.argenti .splash {
+  transform-origin: 28% 28%;
+}
+
+.arlan .splash {
+  transform-origin: 68% 40%;
+}
+
+.asta .splash {
+  transform-origin: 45% 35%;
+}
+
+.aventurine .splash {
+  transform-origin: 59% 34%;
+}
+
+.bailu .splash {
+  transform-origin: 58% 32%;
+}
+
+.blackswan .splash {
+  transform-origin: 40% 27%;
+}
+
+.blade .splash {
+  transform-origin: 50% 7%;
+}
+
+.bronya .splash {
+  transform-origin: 45% 50%;
+}
+
+.clara .splash {
+  transform-origin: 40% 25%;
+}
+
+.danheng .splash {
+  transform-origin: 58% 40%;
+}
+
+.dhil .splash {
+  transform-origin: 60% 25%;
+}
+
+.fuxuan .splash {
+  transform-origin: 46% 25%;
+}
+
+.gallagher .splash {
+  transform-origin: 57% 17%;
+}
+
+.gepard .splash {
+  transform-origin: 60% 40%;
+}
+
+.guinaifen .splash {
+  transform-origin: 50% 32%;
+}
+
+.hanya .splash {
+  transform-origin: 50% 32%;
+}
+
+.herta .splash {
+  transform-origin: 49% 18%;
+}
+
+.himeko .splash {
+  transform-origin: 51% 50%;
+}
+
+.hook .splash {
+  transform-origin: 52% 50%;
+}
+
+.huohuo .splash {
+  transform-origin: 46% 35%;
+}
+
+.jingliu .splash {
+  transform-origin: 51% 18%;
+}
+
+.jingyuan .splash {
+  transform-origin: 51% 40%;
+}
+
+.kafka .splash {
+  transform-origin: 48% 30%;
 }
