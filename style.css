@@ -4,6 +4,7 @@ body {
 
 .card {
   background-color: inherit;
+  height: 220px;
 }
 
 /*.card-body {
@@ -36,8 +37,16 @@ body {
   border-radius: 50%;
 }
 
+@media (max-width: 1400px) {
+  .icon{
+    display: none;
+  }
+}
+
 .splash {
   transform: scale(4);
+  min-height: 174px;
+  min-width: 174px;
 }
 
 .acheron .splash {
@@ -134,4 +143,92 @@ body {
 
 .kafka .splash {
   transform-origin: 48% 30%;
+}
+
+.luka .splash {
+  transform-origin: 44% 23%;
+}
+
+.luocha .splash {
+  transform-origin: 51% 27%;
+}
+
+.lynx .splash {
+  transform-origin: 61% 35%;
+}
+
+.march .splash {
+  transform-origin: 49% 32%;
+}
+
+.misha .splash {
+  transform-origin: 59% 40%;
+}
+
+.natasha .splash {
+  transform-origin: 51% 19%;
+}
+
+.pela .splash {
+  transform-origin: 36% 40%;
+}
+
+.qingque .splash {
+  transform-origin: 48% 31%;
+}
+
+.drratio .splash {
+  transform-origin: 49% 20%;
+}
+
+.ruanmei .splash {
+  transform-origin: 54% 33%;
+}
+
+.sampo .splash {
+  transform-origin: 51% 25%;
+}
+
+.seele .splash {
+  transform-origin: 38% 56%;
+}
+
+.serval .splash {
+  transform-origin: 55% 45%;
+}
+
+.silverwolf .splash {
+  transform-origin: 59% 37%;
+}
+
+.sparkle .splash {
+  transform-origin: 52% 35%;
+}
+
+.sushang .splash {
+  transform-origin: 53% 37%;
+}
+
+.tingyun .splash {
+  transform-origin: 54% 23%;
+}
+
+.topaz .splash {
+  transform-origin: 58% 18%;
+}
+
+.welt .splash {
+  transform-origin: 44% 25%;
+}
+
+.xueyi .splash {
+  transform-origin: 50% 23%;
+}
+
+.yanqing .splash {
+  transform-origin: 55% 28%;
+}
+
+.yukong .splash {
+  transform-origin: 46% 33%;
 }
