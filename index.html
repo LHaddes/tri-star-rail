@@ -9,9 +9,17 @@
 
   <body>
 
-  <div class="row">
+  <button type="button" name="sort by az" onclick="sortByAZ()">Sort A > Z</button>
+  <button type="button" name="sort by za" onclick="sortByZA()">Sort Z > A</button>
+  <button type="button" name="sort by type" onclick="sortByType()">Sort by Type</button>
+  <button type="button" name="sort by path" onclick="sortByPath()">Sort by Path</button>
+  <button type="button" name="sort by rarity" onclick="sortByRarity()">Sort by Rarity</button>
+
+
+  <div class="row row-cols-xxl-4 row-cols-xl-3 row-cols-lg-2 row-cols-sm-2">
+
     <div class="col-3">
-      <div class="card rarity-5stars nihility lightning acheron" style="max-width: 350px;">
+      <div class="card mb-3 rarity-5stars nihility lightning acheron" id="acheron" style="max-width: 350px;">
         <div class="row g-0">
           <div class="col-md-6 img-container">
             <img src="./assets/splash-art/acheron.jpg" class="card-img-top splash" alt="Acheron Splash Art">
@@ -31,7 +39,7 @@
     </div>
 
     <div class="col-3">
-      <div class="card rarity-5stars erudition physical argenti" style="max-width: 350px;">
+      <div class="card mb-3 rarity-5stars erudition physical argenti" id="argenti" style="max-width: 350px;">
         <div class="row g-0">
           <div class="col-md-6 img-container">
             <img src="./assets/splash-art/argenti.jpg" class="card-img-top splash" alt="Argenti Splash Art">
@@ -51,7 +59,7 @@
     </div>
 
     <div class="col-3">
-      <div class="card rarity-4stars destruction lightning arlan" style="max-width: 350px;">
+      <div class="card mb-3 rarity-4stars destruction lightning arlan" id="arlan" style="max-width: 350px;">
         <div class="row g-0">
           <div class="col-md-6 img-container">
             <img src="./assets/splash-art/arlan.jpg" class="card-img-top splash" alt="Arlan Splash Art">
@@ -71,7 +79,7 @@
     </div>
 
     <div class="col-3">
-      <div class="card rarity-4stars harmony fire asta" style="max-width: 350px;">
+      <div class="card mb-3 rarity-4stars harmony fire asta" id="asta" style="max-width: 350px;">
         <div class="row g-0">
           <div class="col-md-6 img-container">
             <img src="./assets/splash-art/asta.jpg" class="card-img-top splash" alt="Asta Splash Art">
@@ -90,765 +98,844 @@
       </div>
     </div>
 
-
-
-
-
-
-
-
-    <div class="card mb-3 rarity-5stars preservation imaginary aventurine" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/aventurine.jpg" class="card-img-top splash" alt="Aventurine Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Aventurine</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-5stars preservation imaginary aventurine" id="aventurine" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/aventurine.jpg" class="card-img-top splash" alt="Aventurine Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
-            <li class="list-group-item character-info">Preservation <img src="./assets/icon/preservation.jpg" class="icon" alt="preservation icon"></li>
-            <li class="list-group-item character-info">Imaginary <img src="./assets/icon/imaginary.jpg" class="icon" alt="imaginary icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Aventurine</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
+              <li class="list-group-item character-info">Preservation <img src="./assets/icon/preservation.jpg" class="icon" alt="preservation icon"></li>
+              <li class="list-group-item character-info">Imaginary <img src="./assets/icon/imaginary.jpg" class="icon" alt="imaginary icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-5stars abundance lightning bailu" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/bailu.jpg" class="card-img-top splash" alt="Bailu Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Bailu</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-5stars abundance lightning bailu" id="bailu" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/bailu.jpg" class="card-img-top splash" alt="Bailu Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
-            <li class="list-group-item character-info">Abundance <img src="./assets/icon/abundance.jpg" class="icon" alt="abundance icon"></li>
-            <li class="list-group-item character-info">Lightning <img src="./assets/icon/imaginary.jpg" class="icon" alt="lightning icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Bailu</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
+              <li class="list-group-item character-info">Abundance <img src="./assets/icon/abundance.jpg" class="icon" alt="abundance icon"></li>
+              <li class="list-group-item character-info">Lightning <img src="./assets/icon/imaginary.jpg" class="icon" alt="lightning icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-5stars nihility wind blackswan" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/blackswan.jpg" class="card-img-top splash" alt="Black Swan Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Black Swan</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-5stars nihility wind blackswan" id="blackswan" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/blackswan.jpg" class="card-img-top splash" alt="Black Swan Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
-            <li class="list-group-item character-info">Nihility <img src="./assets/icon/nihility.jpg" class="icon" alt="nihility icon"></li>
-            <li class="list-group-item character-info">Wind <img src="./assets/icon/wind.jpg" class="icon" alt="wind icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Black Swan</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
+              <li class="list-group-item character-info">Nihility <img src="./assets/icon/nihility.jpg" class="icon" alt="nihility icon"></li>
+              <li class="list-group-item character-info">Wind <img src="./assets/icon/wind.jpg" class="icon" alt="wind icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-5stars destruction wind blade" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/blade.jpg" class="card-img-top splash" alt="Blade Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Blade</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-5stars destruction wind blade" id="blade" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/blade.jpg" class="card-img-top splash" alt="Blade Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
-            <li class="list-group-item character-info">Destruction <img src="./assets/icon/destruction.jpg" class="icon" alt="destruction icon"></li>
-            <li class="list-group-item character-info">Wind <img src="./assets/icon/wind.jpg" class="icon" alt="wind icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Blade</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
+              <li class="list-group-item character-info">Destruction <img src="./assets/icon/destruction.jpg" class="icon" alt="destruction icon"></li>
+              <li class="list-group-item character-info">Wind <img src="./assets/icon/wind.jpg" class="icon" alt="wind icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-5stars harmony wind bronya" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/bronya.jpg" class="card-img-top splash" alt="Bronya Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Bronya</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-5stars harmony wind bronya" id="bronya" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/bronya.jpg" class="card-img-top splash" alt="Bronya Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
-            <li class="list-group-item character-info">Harmony <img src="./assets/icon/harmony.jpg" class="icon" alt="harmony icon"></li>
-            <li class="list-group-item character-info">Wind <img src="./assets/icon/wind.jpg" class="icon" alt="wind icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Bronya</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
+              <li class="list-group-item character-info">Harmony <img src="./assets/icon/harmony.jpg" class="icon" alt="harmony icon"></li>
+              <li class="list-group-item character-info">Wind <img src="./assets/icon/wind.jpg" class="icon" alt="wind icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-5stars destruction physical clara" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/clara.jpg" class="card-img-top splash" alt="Clara Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Clara</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-5stars destruction physical clara" id="clara" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/clara.jpg" class="card-img-top splash" alt="Clara Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
-            <li class="list-group-item character-info">Destruction <img src="./assets/icon/destruction.jpg" class="icon" alt="destruction icon"></li>
-            <li class="list-group-item character-info">Physical <img src="./assets/icon/physical.jpg" class="icon" alt="physical icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Clara</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
+              <li class="list-group-item character-info">Destruction <img src="./assets/icon/destruction.jpg" class="icon" alt="destruction icon"></li>
+              <li class="list-group-item character-info">Physical <img src="./assets/icon/physical.jpg" class="icon" alt="physical icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-4stars hunt wind danheng" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/danheng.jpg" class="card-img-top splash" alt="Dan Heng Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Dan Heng</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-4stars hunt wind danheng" id="danheng" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/danheng.jpg" class="card-img-top splash" alt="Dan Heng Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
-            <li class="list-group-item character-info">Hunt <img src="./assets/icon/hunt.jpg" class="icon" alt="hunt icon"></li>
-            <li class="list-group-item character-info">Wind <img src="./assets/icon/wind.jpg" class="icon" alt="wind icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Dan Heng</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
+              <li class="list-group-item character-info">Hunt <img src="./assets/icon/hunt.jpg" class="icon" alt="hunt icon"></li>
+              <li class="list-group-item character-info">Wind <img src="./assets/icon/wind.jpg" class="icon" alt="wind icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-5stars destruction imaginary dhil" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/dhil.jpg" class="card-img-top splash" alt="DHIL Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Dan Heng Imbibator Lunae</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-5stars destruction imaginary dhil" id="dhil" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/dhil.jpg" class="card-img-top splash" alt="DHIL Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
-            <li class="list-group-item character-info">Destruction <img src="./assets/icon/destruction.jpg" class="icon" alt="destruction icon"></li>
-            <li class="list-group-item character-info">Imaginary <img src="./assets/icon/imaginary.jpg" class="icon" alt="imaginary icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Dan Heng IL</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
+              <li class="list-group-item character-info">Destruction <img src="./assets/icon/destruction.jpg" class="icon" alt="destruction icon"></li>
+              <li class="list-group-item character-info">Imaginary <img src="./assets/icon/imaginary.jpg" class="icon" alt="imaginary icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-5stars preservation quantum fuxuan" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/fuxuan.jpg" class="card-img-top splash" alt="Fu Xuan Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Fu Xuan</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-5stars preservation quantum fuxuan" id="fuxuan" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/fuxuan.jpg" class="card-img-top splash" alt="Fu Xuan Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
-            <li class="list-group-item character-info">Preservation <img src="./assets/icon/preservation.jpg" class="icon" alt="preservation icon"></li>
-            <li class="list-group-item character-info">Quantum <img src="./assets/icon/quantum.jpg" class="icon" alt="quantum icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Fu Xuan</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
+              <li class="list-group-item character-info">Preservation <img src="./assets/icon/preservation.jpg" class="icon" alt="preservation icon"></li>
+              <li class="list-group-item character-info">Quantum <img src="./assets/icon/quantum.jpg" class="icon" alt="quantum icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-4stars abundance fire gallagher" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/gallagher.jpg" class="card-img-top splash" alt="Gallagher Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Gallagher</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-4stars abundance fire gallagher" id="gallagher" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/gallagher.jpg" class="card-img-top splash" alt="Gallagher Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
-            <li class="list-group-item character-info">Abundance <img src="./assets/icon/abundance.jpg" class="icon" alt="abundance icon"></li>
-            <li class="list-group-item character-info">Fire <img src="./assets/icon/fire.jpg" class="icon" alt="fire icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Gallagher</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
+              <li class="list-group-item character-info">Abundance <img src="./assets/icon/abundance.jpg" class="icon" alt="abundance icon"></li>
+              <li class="list-group-item character-info">Fire <img src="./assets/icon/fire.jpg" class="icon" alt="fire icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-5stars preservation ice gepard" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/gepard.jpg" class="card-img-top splash" alt="Gepard Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Gepard</h5></h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-5stars preservation ice gepard" id="gepard" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/gepard.jpg" class="card-img-top splash" alt="Gepard Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
-            <li class="list-group-item character-info">Preservation <img src="./assets/icon/preservation.jpg" class="icon" alt="preservation icon"></li>
-            <li class="list-group-item character-info">Ice <img src="./assets/icon/ice.jpg" class="icon" alt="ice icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Gepard</h5></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
+              <li class="list-group-item character-info">Preservation <img src="./assets/icon/preservation.jpg" class="icon" alt="preservation icon"></li>
+              <li class="list-group-item character-info">Ice <img src="./assets/icon/ice.jpg" class="icon" alt="ice icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-4stars nihility fire guinaifen" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/guinaifen.jpg" class="card-img-top splash" alt="Guinaifen Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Guinaifen</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-4stars nihility fire guinaifen" id="guinaifen" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/guinaifen.jpg" class="card-img-top splash" alt="Guinaifen Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
-            <li class="list-group-item character-info">Nihility <img src="./assets/icon/nihility.jpg" class="icon" alt="nihility icon"></li>
-            <li class="list-group-item character-info">Fire <img src="./assets/icon/fire.jpg" class="icon" alt="fire icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Guinaifen</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
+              <li class="list-group-item character-info">Nihility <img src="./assets/icon/nihility.jpg" class="icon" alt="nihility icon"></li>
+              <li class="list-group-item character-info">Fire <img src="./assets/icon/fire.jpg" class="icon" alt="fire icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-4stars harmony physical hanya" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/hanya.jpg" class="card-img-top splash" alt="Hanya Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Hanya</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-4stars harmony physical hanya" id="hanya" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/hanya.jpg" class="card-img-top splash" alt="Hanya Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
-            <li class="list-group-item character-info">Harmony <img src="./assets/icon/harmony.jpg" class="icon" alt="harmony icon"></li>
-            <li class="list-group-item character-info">Physical <img src="./assets/icon/physical.jpg" class="icon" alt="physical icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Hanya</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
+              <li class="list-group-item character-info">Harmony <img src="./assets/icon/harmony.jpg" class="icon" alt="harmony icon"></li>
+              <li class="list-group-item character-info">Physical <img src="./assets/icon/physical.jpg" class="icon" alt="physical icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-4stars erudition ice herta" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/herta.jpg" class="card-img-top splash" alt="Herta Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Herta</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-4stars erudition ice herta" id="herta" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/herta.jpg" class="card-img-top splash" alt="Herta Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
-            <li class="list-group-item character-info">Erudition <img src="./assets/icon/erudition.jpg" class="icon" alt="erudition icon"></li>
-            <li class="list-group-item character-info">Ice <img src="./assets/icon/ice.jpg" class="icon" alt="ice icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Herta</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
+              <li class="list-group-item character-info">Erudition <img src="./assets/icon/erudition.jpg" class="icon" alt="erudition icon"></li>
+              <li class="list-group-item character-info">Ice <img src="./assets/icon/ice.jpg" class="icon" alt="ice icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-5stars erudition fire himeko" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/himeko.jpg" class="card-img-top splash" alt="Himeko Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Himeko</h5></h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-5stars erudition fire himeko" id="himeko" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/himeko.jpg" class="card-img-top splash" alt="Himeko Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
-            <li class="list-group-item character-info">Erudition <img src="./assets/icon/erudition.jpg" class="icon" alt="erudition icon"></li>
-            <li class="list-group-item character-info">Fire <img src="./assets/icon/fire.jpg" class="icon" alt="fire icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Himeko</h5></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
+              <li class="list-group-item character-info">Erudition <img src="./assets/icon/erudition.jpg" class="icon" alt="erudition icon"></li>
+              <li class="list-group-item character-info">Fire <img src="./assets/icon/fire.jpg" class="icon" alt="fire icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-4stars destruction fire hook" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/hook.jpg" class="card-img-top splash" alt="Hook Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Hook</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-4stars destruction fire hook" id="hook" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/hook.jpg" class="card-img-top splash" alt="Hook Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
-            <li class="list-group-item character-info">Destruction <img src="./assets/icon/destruction.jpg" class="icon" alt="destruction icon"></li>
-            <li class="list-group-item character-info">Fire <img src="./assets/icon/fire.jpg" class="icon" alt="fire icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Hook</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
+              <li class="list-group-item character-info">Destruction <img src="./assets/icon/destruction.jpg" class="icon" alt="destruction icon"></li>
+              <li class="list-group-item character-info">Fire <img src="./assets/icon/fire.jpg" class="icon" alt="fire icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-5stars abundance wind huohuo" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/huohuo.jpg" class="card-img-top splash" alt="Huohuo Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Huohuo</h5></h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-5stars abundance wind huohuo" id="huohuo" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/huohuo.jpg" class="card-img-top splash" alt="Huohuo Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
-            <li class="list-group-item character-info">Abundance <img src="./assets/icon/abundance.jpg" class="icon" alt="abundance icon"></li>
-            <li class="list-group-item character-info">Wind <img src="./assets/icon/wind.jpg" class="icon" alt="wind icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Huohuo</h5></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
+              <li class="list-group-item character-info">Abundance <img src="./assets/icon/abundance.jpg" class="icon" alt="abundance icon"></li>
+              <li class="list-group-item character-info">Wind <img src="./assets/icon/wind.jpg" class="icon" alt="wind icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-5stars destruction ice jingliu" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/jingliu.jpg" class="card-img-top splash" alt="Jingliu Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Jingliu</h5></h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-5stars destruction ice jingliu" id="jingliu" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/jingliu.jpg" class="card-img-top splash" alt="Jingliu Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
-            <li class="list-group-item character-info">Destruction <img src="./assets/icon/destruction.jpg" class="icon" alt="destruction icon"></li>
-            <li class="list-group-item character-info">Ice <img src="./assets/icon/ice.jpg" class="icon" alt="ice icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Jingliu</h5></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
+              <li class="list-group-item character-info">Destruction <img src="./assets/icon/destruction.jpg" class="icon" alt="destruction icon"></li>
+              <li class="list-group-item character-info">Ice <img src="./assets/icon/ice.jpg" class="icon" alt="ice icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-5stars erudition lightning jingyuan" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/jingyuan.jpg" class="card-img-top splash" alt="Jingyuan Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Jingyuan</h5></h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-5stars erudition lightning jingyuan" id="jingyuan" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/jingyuan.jpg" class="card-img-top splash" alt="Jingyuan Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
-            <li class="list-group-item character-info">Erudition <img src="./assets/icon/erudition.jpg" class="icon" alt="erudition icon"></li>
-            <li class="list-group-item character-info">Lightning <img src="./assets/icon/lightning.jpg" class="icon" alt="lightning icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Jingyuan</h5></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
+              <li class="list-group-item character-info">Erudition <img src="./assets/icon/erudition.jpg" class="icon" alt="erudition icon"></li>
+              <li class="list-group-item character-info">Lightning <img src="./assets/icon/lightning.jpg" class="icon" alt="lightning icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-5stars nihility lightning kafka" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/kafka.jpg" class="card-img-top splash" alt="Kafka Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Kafka</h5></h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-5stars nihility lightning kafka" id="kafka" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/kafka.jpg" class="card-img-top splash" alt="Kafka Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
-            <li class="list-group-item character-info">Nihility <img src="./assets/icon/nihility.jpg" class="icon" alt="nihility icon"></li>
-            <li class="list-group-item character-info">Lightning <img src="./assets/icon/lightning.jpg" class="icon" alt="lightning icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Kafka</h5></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
+              <li class="list-group-item character-info">Nihility <img src="./assets/icon/nihility.jpg" class="icon" alt="nihility icon"></li>
+              <li class="list-group-item character-info">Lightning <img src="./assets/icon/lightning.jpg" class="icon" alt="lightning icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-4stars nihility physical luka" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/luka.jpg" class="card-img-top splash" alt="Luka Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Luka</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-4stars nihility physical luka" id="luka" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/luka.jpg" class="card-img-top splash" alt="Luka Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
-            <li class="list-group-item character-info">Nihility <img src="./assets/icon/nihility.jpg" class="icon" alt="nihility icon"></li>
-            <li class="list-group-item character-info">Physical <img src="./assets/icon/physical.jpg" class="icon" alt="physical icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Luka</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
+              <li class="list-group-item character-info">Nihility <img src="./assets/icon/nihility.jpg" class="icon" alt="nihility icon"></li>
+              <li class="list-group-item character-info">Physical <img src="./assets/icon/physical.jpg" class="icon" alt="physical icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-5stars abundance imaginary luocha" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/luocha.jpg" class="card-img-top splash" alt="Luocha Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Luocha</h5></h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-5stars abundance imaginary luocha" id="luocha" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/luocha.jpg" class="card-img-top splash" alt="Luocha Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
-            <li class="list-group-item character-info">Abundance <img src="./assets/icon/abundance.jpg" class="icon" alt="abundance icon"></li>
-            <li class="list-group-item character-info">Imaginary <img src="./assets/icon/imaginary.jpg" class="icon" alt="imaginary icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Luocha</h5></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
+              <li class="list-group-item character-info">Abundance <img src="./assets/icon/abundance.jpg" class="icon" alt="abundance icon"></li>
+              <li class="list-group-item character-info">Imaginary <img src="./assets/icon/imaginary.jpg" class="icon" alt="imaginary icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-4stars abundance quantum lynx" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/lynx.jpg" class="card-img-top splash" alt="Lynx Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Lynx</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-4stars abundance quantum lynx" id="lynx" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/lynx.jpg" class="card-img-top splash" alt="Lynx Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
-            <li class="list-group-item character-info">Abundance <img src="./assets/icon/abundance.jpg" class="icon" alt="abundance icon"></li>
-            <li class="list-group-item character-info">Quantum <img src="./assets/icon/quantum.jpg" class="icon" alt="quantum icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Lynx</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
+              <li class="list-group-item character-info">Abundance <img src="./assets/icon/abundance.jpg" class="icon" alt="abundance icon"></li>
+              <li class="list-group-item character-info">Quantum <img src="./assets/icon/quantum.jpg" class="icon" alt="quantum icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-4stars preservation ice march" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/march.jpg" class="card-img-top splash" alt="March Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">March 7th</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-4stars preservation ice march" id="march" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/march.jpg" class="card-img-top splash" alt="March Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
-            <li class="list-group-item character-info">Preservation <img src="./assets/icon/preservation.jpg" class="icon" alt="preservation icon"></li>
-            <li class="list-group-item character-info">Ice <img src="./assets/icon/ice.jpg" class="icon" alt="ice icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">March 7th</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
+              <li class="list-group-item character-info">Preservation <img src="./assets/icon/preservation.jpg" class="icon" alt="preservation icon"></li>
+              <li class="list-group-item character-info">Ice <img src="./assets/icon/ice.jpg" class="icon" alt="ice icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-4stars destruction ice misha" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/misha.jpg" class="card-img-top splash" alt="Misha Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Misha</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-4stars destruction ice misha" id="misha" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/misha.jpg" class="card-img-top splash" alt="Misha Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
-            <li class="list-group-item character-info">Destruction <img src="./assets/icon/destruction.jpg" class="icon" alt="destruction icon"></li>
-            <li class="list-group-item character-info">Ice <img src="./assets/icon/ice.jpg" class="icon" alt="ice icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Misha</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
+              <li class="list-group-item character-info">Destruction <img src="./assets/icon/destruction.jpg" class="icon" alt="destruction icon"></li>
+              <li class="list-group-item character-info">Ice <img src="./assets/icon/ice.jpg" class="icon" alt="ice icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-4stars abundance physical natasha" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/natasha.jpg" class="card-img-top splash" alt="Natasha Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Natasha</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-4stars abundance physical natasha" id="natasha" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/natasha.jpg" class="card-img-top splash" alt="Natasha Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
-            <li class="list-group-item character-info">Abundance <img src="./assets/icon/abundance.jpg" class="icon" alt="abundance icon"></li>
-            <li class="list-group-item character-info">Physical <img src="./assets/icon/physical.jpg" class="icon" alt="physical icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Natasha</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
+              <li class="list-group-item character-info">Abundance <img src="./assets/icon/abundance.jpg" class="icon" alt="abundance icon"></li>
+              <li class="list-group-item character-info">Physical <img src="./assets/icon/physical.jpg" class="icon" alt="physical icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-4stars nihility ice pela" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/pela.jpg" class="card-img-top splash" alt="Pela Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Pela</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-4stars nihility ice pela" id="pela" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/pela.jpg" class="card-img-top splash" alt="Pela Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
-            <li class="list-group-item character-info">Nihility <img src="./assets/icon/nihility.jpg" class="icon" alt="nihility icon"></li>
-            <li class="list-group-item character-info">Ice <img src="./assets/icon/ice.jpg" class="icon" alt="ice icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Pela</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
+              <li class="list-group-item character-info">Nihility <img src="./assets/icon/nihility.jpg" class="icon" alt="nihility icon"></li>
+              <li class="list-group-item character-info">Ice <img src="./assets/icon/ice.jpg" class="icon" alt="ice icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-4stars erudition quantum qingque" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/qingque.jpg" class="card-img-top splash" alt="Qingque Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Qingque</h5>
+
+    <div class="col-3">
+      <div class="card mb-3 rarity-4stars erudition quantum qingque" id="qingque" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/qingque.jpg" class="card-img-top splash" alt="Qingque Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
-            <li class="list-group-item character-info">Erudition <img src="./assets/icon/erudition.jpg" class="icon" alt="erudition icon"></li>
-            <li class="list-group-item character-info">Quantum <img src="./assets/icon/quantum.jpg" class="icon" alt="quantum icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Qingque</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
+              <li class="list-group-item character-info">Erudition <img src="./assets/icon/erudition.jpg" class="icon" alt="erudition icon"></li>
+              <li class="list-group-item character-info">Quantum <img src="./assets/icon/quantum.jpg" class="icon" alt="quantum icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-5stars hunt imaginary drratio" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/ratio.jpg" class="card-img-top splash" alt="Dr Ratio Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Dr Ratio</h5></h5>
+
+    <div class="col-3">
+      <div class="card mb-3 rarity-5stars hunt imaginary drratio" id="drratio" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/ratio.jpg" class="card-img-top splash" alt="Dr Ratio Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
-            <li class="list-group-item character-info">Hunt <img src="./assets/icon/hunt.jpg" class="icon" alt="hunt icon"></li>
-            <li class="list-group-item character-info">Imaginary <img src="./assets/icon/imaginary.jpg" class="icon" alt="imaginary icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Dr Ratio</h5></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
+              <li class="list-group-item character-info">Hunt <img src="./assets/icon/hunt.jpg" class="icon" alt="hunt icon"></li>
+              <li class="list-group-item character-info">Imaginary <img src="./assets/icon/imaginary.jpg" class="icon" alt="imaginary icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-5stars harmony ice ruanmei" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/ruanmei.jpg" class="card-img-top splash" alt="Ruan Mei Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Ruan Mei</h5></h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-5stars harmony ice ruanmei" id="ruanmei" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/ruanmei.jpg" class="card-img-top splash" alt="Ruan Mei Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
-            <li class="list-group-item character-info">Harmony <img src="./assets/icon/harmony.jpg" class="icon" alt="harmony icon"></li>
-            <li class="list-group-item character-info">Ice <img src="./assets/icon/ice.jpg" class="icon" alt="ice icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Ruan Mei</h5></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
+              <li class="list-group-item character-info">Harmony <img src="./assets/icon/harmony.jpg" class="icon" alt="harmony icon"></li>
+              <li class="list-group-item character-info">Ice <img src="./assets/icon/ice.jpg" class="icon" alt="ice icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-4stars nihility wind sampo" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/sampo.jpg" class="card-img-top splash" alt="Sampo Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Sampo</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-4stars nihility wind sampo" id="sampo" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/sampo.jpg" class="card-img-top splash" alt="Sampo Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
-            <li class="list-group-item character-info">Nihility <img src="./assets/icon/nihility.jpg" class="icon" alt="nihility icon"></li>
-            <li class="list-group-item character-info">Wind <img src="./assets/icon/wind.jpg" class="icon" alt="wind icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Sampo</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
+              <li class="list-group-item character-info">Nihility <img src="./assets/icon/nihility.jpg" class="icon" alt="nihility icon"></li>
+              <li class="list-group-item character-info">Wind <img src="./assets/icon/wind.jpg" class="icon" alt="wind icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-5stars hunt quantum seele" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/seele.jpg" class="card-img-top splash" alt="Seele Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Seele</h5></h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-5stars hunt quantum seele" id="seele" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/seele.jpg" class="card-img-top splash" alt="Seele Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
-            <li class="list-group-item character-info">Hunt <img src="./assets/icon/hunt.jpg" class="icon" alt="hunt icon"></li>
-            <li class="list-group-item character-info">Quantum <img src="./assets/icon/quantum.jpg" class="icon" alt="quantum icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Seele</h5></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
+              <li class="list-group-item character-info">Hunt <img src="./assets/icon/hunt.jpg" class="icon" alt="hunt icon"></li>
+              <li class="list-group-item character-info">Quantum <img src="./assets/icon/quantum.jpg" class="icon" alt="quantum icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-4stars erudition lightning serval" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/serval.jpg" class="card-img-top splash" alt="Serval Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Serval</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-4stars erudition lightning serval" id="serval" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/serval.jpg" class="card-img-top splash" alt="Serval Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
-            <li class="list-group-item character-info">Erudition <img src="./assets/icon/erudition.jpg" class="icon" alt="erudition icon"></li>
-            <li class="list-group-item character-info">Lightning <img src="./assets/icon/lightning.jpg" class="icon" alt="lightning icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Serval</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
+              <li class="list-group-item character-info">Erudition <img src="./assets/icon/erudition.jpg" class="icon" alt="erudition icon"></li>
+              <li class="list-group-item character-info">Lightning <img src="./assets/icon/lightning.jpg" class="icon" alt="lightning icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-5stars nihility quantum silverwolf" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/silverwolf.jpg" class="card-img-top splash" alt="Silverwolf Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Silver Wolf</h5></h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-5stars nihility quantum silverwolf" id="silverwolf" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/silverwolf.jpg" class="card-img-top splash" alt="Silverwolf Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
-            <li class="list-group-item character-info">Nihility <img src="./assets/icon/nihility.jpg" class="icon" alt="nihility icon"></li>
-            <li class="list-group-item character-info">Quantum <img src="./assets/icon/quantum.jpg" class="icon" alt="quantum icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Silver Wolf</h5></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
+              <li class="list-group-item character-info">Nihility <img src="./assets/icon/nihility.jpg" class="icon" alt="nihility icon"></li>
+              <li class="list-group-item character-info">Quantum <img src="./assets/icon/quantum.jpg" class="icon" alt="quantum icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-5stars harmony quantum sparkle" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/sparkle.jpg" class="card-img-top splash" alt="Sparkle Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Sparkle</h5></h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-5stars harmony quantum sparkle" id="sparkle" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/sparkle.jpg" class="card-img-top splash" alt="Sparkle Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
-            <li class="list-group-item character-info">Harmony <img src="./assets/icon/harmony.jpg" class="icon" alt="harmony icon"></li>
-            <li class="list-group-item character-info">Quantum <img src="./assets/icon/quantum.jpg" class="icon" alt="quantum icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Sparkle</h5></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
+              <li class="list-group-item character-info">Harmony <img src="./assets/icon/harmony.jpg" class="icon" alt="harmony icon"></li>
+              <li class="list-group-item character-info">Quantum <img src="./assets/icon/quantum.jpg" class="icon" alt="quantum icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-4stars hunt physical sushang" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/sushang.jpg" class="card-img-top splash" alt="Sushang Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Sushang</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-4stars hunt physical sushang" id="sushang" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/sushang.jpg" class="card-img-top splash" alt="Sushang Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
-            <li class="list-group-item character-info">Hunt <img src="./assets/icon/hunt.jpg" class="icon" alt="hunt icon"></li>
-            <li class="list-group-item character-info">Physical <img src="./assets/icon/physical.jpg" class="icon" alt="physical icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Sushang</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
+              <li class="list-group-item character-info">Hunt <img src="./assets/icon/hunt.jpg" class="icon" alt="hunt icon"></li>
+              <li class="list-group-item character-info">Physical <img src="./assets/icon/physical.jpg" class="icon" alt="physical icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-4stars harmony lightning tingyun" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/tingyun.jpg" class="card-img-top splash" alt="Tingyun Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Tingyun</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-4stars harmony lightning tingyun" id="tingyun" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/tingyun.jpg" class="card-img-top splash" alt="Tingyun Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
-            <li class="list-group-item character-info">Harmony <img src="./assets/icon/harmony.jpg" class="icon" alt="harmony icon"></li>
-            <li class="list-group-item character-info">Lightning <img src="./assets/icon/lightning.jpg" class="icon" alt="lightning icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Tingyun</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
+              <li class="list-group-item character-info">Harmony <img src="./assets/icon/harmony.jpg" class="icon" alt="harmony icon"></li>
+              <li class="list-group-item character-info">Lightning <img src="./assets/icon/lightning.jpg" class="icon" alt="lightning icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-5stars hunt fire topaz" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/topaz.jpg" class="card-img-top splash" alt="Topaz Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Topaz</h5></h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-5stars hunt fire topaz" id="topaz" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/topaz.jpg" class="card-img-top splash" alt="Topaz Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
-            <li class="list-group-item character-info">Hunt <img src="./assets/icon/hunt.jpg" class="icon" alt="hunt icon"></li>
-            <li class="list-group-item character-info">Fire <img src="./assets/icon/fire.jpg" class="icon" alt="fire icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Topaz</h5></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
+              <li class="list-group-item character-info">Hunt <img src="./assets/icon/hunt.jpg" class="icon" alt="hunt icon"></li>
+              <li class="list-group-item character-info">Fire <img src="./assets/icon/fire.jpg" class="icon" alt="fire icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-5stars nihility imaginary welt" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/welt.jpg" class="card-img-top splash" alt="Welt Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Welt</h5></h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-5stars nihility imaginary welt" id="welt" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/welt.jpg" class="card-img-top splash" alt="Welt Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
-            <li class="list-group-item character-info">Nihility <img src="./assets/icon/nihility.jpg" class="icon" alt="nihility icon"></li>
-            <li class="list-group-item character-info">Imaginary <img src="./assets/icon/imaginary.jpg" class="icon" alt="imaginary icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Welt</h5></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
+              <li class="list-group-item character-info">Nihility <img src="./assets/icon/nihility.jpg" class="icon" alt="nihility icon"></li>
+              <li class="list-group-item character-info">Imaginary <img src="./assets/icon/imaginary.jpg" class="icon" alt="imaginary icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-4stars destruction quantum xueyi" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/xueyi.jpg" class="card-img-top splash" alt="Xueyi Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Xueyi</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-4stars destruction quantum xueyi" id="xueyi" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/xueyi.jpg" class="card-img-top splash" alt="Xueyi Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
-            <li class="list-group-item character-info">Destruction <img src="./assets/icon/destruction.jpg" class="icon" alt="destruction icon"></li>
-            <li class="list-group-item character-info">Quantum <img src="./assets/icon/quantum.jpg" class="icon" alt="quantum icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Xueyi</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
+              <li class="list-group-item character-info">Destruction <img src="./assets/icon/destruction.jpg" class="icon" alt="destruction icon"></li>
+              <li class="list-group-item character-info">Quantum <img src="./assets/icon/quantum.jpg" class="icon" alt="quantum icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-5stars hunt ice yanqing" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/yanqing.jpg" class="card-img-top splash" alt="Yanqing Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Yanqing</h5></h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-5stars hunt ice yanqing" id="yanqing" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/yanqing.jpg" class="card-img-top splash" alt="Yanqing Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
-            <li class="list-group-item character-info">Hunt <img src="./assets/icon/hunt.jpg" class="icon" alt="hunt icon"></li>
-            <li class="list-group-item character-info">Ice <img src="./assets/icon/ice.jpg" class="icon" alt="ice icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Yanqing</h5></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
+              <li class="list-group-item character-info">Hunt <img src="./assets/icon/hunt.jpg" class="icon" alt="hunt icon"></li>
+              <li class="list-group-item character-info">Ice <img src="./assets/icon/ice.jpg" class="icon" alt="ice icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3 rarity-4stars harmony imaginary yukong" style="max-width: 350px;">
-      <div class="row g-0">
-        <div class="col-md-6 img-container">
-          <img src="./assets/splash-art/yukong.jpg" class="card-img-top splash" alt="Yukong Splash Art">
-        </div>
-        <div class="col-md-6 card-info-text">
-          <div class="card-body">
-            <h5 class="card-title">Yukong</h5>
+    <div class="col-3">
+      <div class="card mb-3 rarity-4stars harmony imaginary yukong" id="yukong" style="max-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6 img-container">
+            <img src="./assets/splash-art/yukong.jpg" class="card-img-top splash" alt="Yukong Splash Art">
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
-            <li class="list-group-item character-info">Harmony <img src="./assets/icon/harmony.jpg" class="icon" alt="harmony icon"></li>
-            <li class="list-group-item character-info">Imaginary <img src="./assets/icon/imaginary.jpg" class="icon" alt="imaginary icon"></li>
-          </ul>
+          <div class="col-md-6 card-info-text">
+            <div class="card-body">
+              <h5 class="card-title">Yukong</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item character-info"><img src="./assets/icon/4stars.jpg" alt="4 stars"></li>
+              <li class="list-group-item character-info">Harmony <img src="./assets/icon/harmony.jpg" class="icon" alt="harmony icon"></li>
+              <li class="list-group-item character-info">Imaginary <img src="./assets/icon/imaginary.jpg" class="icon" alt="imaginary icon"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

@@ -5,6 +5,7 @@ body {
 .card {
   background-color: inherit;
   height: 220px;
+  width: 348px;
 }
 
 /*.card-body {
@@ -30,6 +31,7 @@ body {
 
 .img-container {
   overflow: hidden;
+  height: 220px;
 }
 
 .icon {
@@ -37,11 +39,11 @@ body {
   border-radius: 50%;
 }
 
-@media (max-width: 1400px) {
+/*@media (max-width: 1400px) {
   .icon{
     display: none;
   }
-}
+}*/
 
 .splash {
   transform: scale(4);
@@ -231,4 +233,12 @@ body {
 
 .yukong .splash {
   transform-origin: 46% 33%;
+}
+
+#acheron{
+  order: 0;
+}
+
+.row > .col-3 {
+  display: flex;
 }
