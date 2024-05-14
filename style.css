@@ -235,10 +235,29 @@ body {
   transform-origin: 46% 33%;
 }
 
-#acheron{
-  order: 0;
-}
-
 .row > .col-3 {
   display: flex;
+}
+
+.drop-button{
+  color: black;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 120px;
+  z-index: 1;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }

@@ -9,11 +9,17 @@
 
   <body>
 
-  <button type="button" name="sort by az" onclick="sortByAZ()">Sort A > Z</button>
-  <button type="button" name="sort by za" onclick="sortByZA()">Sort Z > A</button>
-  <button type="button" name="sort by type" onclick="sortByType()">Sort by Type</button>
-  <button type="button" name="sort by path" onclick="sortByPath()">Sort by Path</button>
-  <button type="button" name="sort by rarity" onclick="sortByRarity()">Sort by Rarity</button>
+  <div class="dropdown">
+    <button class="drop-button" type="button" name="Sorting">Sorting</button>
+    <div class="dropdown-content">
+      <button type="button" name="sort by az" onclick="sortByAZ()">Sort A > Z</button>
+      <button type="button" name="sort by za" onclick="sortByZA()">Sort Z > A</button>
+      <button type="button" name="sort by type" onclick="sortByType()">Sort by Type</button>
+      <button type="button" name="sort by path" onclick="sortByPath()">Sort by Path</button>
+      <button type="button" name="sort by rarity" onclick="sortByRarity()">Sort by Rarity</button>
+    </div>
+  </div>
+
 
 
   <div class="row row-cols-xxl-4 row-cols-xl-3 row-cols-lg-2 row-cols-sm-2">
