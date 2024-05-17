@@ -9,16 +9,43 @@
 
   <body>
 
-  <div class="dropdown">
-    <button class="drop-button" type="button" name="Sorting">Sorting</button>
-    <div class="dropdown-content">
-      <button type="button" name="sort by az" onclick="sortByAZ()">Sort A > Z</button>
-      <button type="button" name="sort by za" onclick="sortByZA()">Sort Z > A</button>
-      <button type="button" name="sort by type" onclick="sortByType()">Sort by Type</button>
-      <button type="button" name="sort by path" onclick="sortByPath()">Sort by Path</button>
-      <button type="button" name="sort by rarity" onclick="sortByRarity()">Sort by Rarity</button>
+  <div class="sort-options">
+    <div class="dropdown">
+      <button class="drop-button" type="button" name="Sorting">Sorting</button>
+      <div class="dropdown-content">
+        <button type="button" name="sort by az" onclick="sortByAZ()">Sort A > Z</button>
+        <button type="button" name="sort by za" onclick="sortByZA()">Sort Z > A</button>
+        <button type="button" name="sort by type" onclick="sortByType()">Sort by Type</button>
+        <button type="button" name="sort by path" onclick="sortByPath()">Sort by Path</button>
+        <button type="button" name="sort by rarity" onclick="sortByRarity()">Sort by Rarity</button>
+      </div>
     </div>
+
+    <p>Show only</p>
+    <div class="multi-select">
+      <select id="tagselect" name="show-by-tag" multiple onchange="showOnly(this)">
+        <option value="rarity-5stars">5 Stars</option>
+        <option value="rarity-4stars">4 Stars</option>
+        <option value="destruction">Destruction</option>
+        <option value="hunt">Hunt</option>
+        <option value="erudition">Erudition</option>
+        <option value="harmony">Harmony</option>
+        <option value="nihility">Nihility</option>
+        <option value="preservation">Preservation</option>
+        <option value="abundance">Abundance</option>
+        <option value="physical">Physical</option>
+        <option value="fire">Fire</option>
+        <option value="ice">Ice</option>
+        <option value="lightning">Lightning</option>
+        <option value="wind">Wind</option>
+        <option value="quantum">Quantum</option>
+        <option value="imaginary">Imaginary</option>
+      </select>
+    </div>
+    <button type="button" name="button" onclick="resetSelect()">Reset</button>
   </div>
+
+
 
 
 
@@ -137,7 +164,7 @@
             <ul class="list-group list-group-flush">
               <li class="list-group-item character-info"><img src="./assets/icon/5stars.jpg" alt="5 stars"></li>
               <li class="list-group-item character-info">Abundance <img src="./assets/icon/abundance.jpg" class="icon" alt="abundance icon"></li>
-              <li class="list-group-item character-info">Lightning <img src="./assets/icon/imaginary.jpg" class="icon" alt="lightning icon"></li>
+              <li class="list-group-item character-info">Lightning <img src="./assets/icon/lightning.jpg" class="icon" alt="lightning icon"></li>
             </ul>
           </div>
         </div>

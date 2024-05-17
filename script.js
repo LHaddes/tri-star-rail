@@ -108,3 +108,46 @@ function sortByRarity(){
 
   }
 }
+
+function showOnly(select){
+
+  var characters = document.getElementsByClassName("card");
+  for(var char of characters){
+    char.parentNode.style.display = "flex";
+  }
+  var args = [];
+
+  for(var opt of select.options)
+  {
+    if(opt.selected){
+      args.push(opt.value);
+    }
+  }
+
+  if(args.length <= 0){
+    for(var char of characters){
+      char.parentNode.style.display = "flex";
+    }
+    return;
+  }
+
+  for (var i = 0; i < characters.length; i++){
+    var currentChar = characters[i];
+
+    for(var arg of args){
+      if(!currentChar.classList.contains(arg))
+      {
+        currentChar.parentNode.style.display = "none";
+      }
+    }
+
+
+  }
+}
+
+function resetSelect(){
+  const s = document.getElementById("tagselect");
+
+  s.selectedIndex = -1;
+  showOnly(s);
+}
