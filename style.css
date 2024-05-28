@@ -183,6 +183,10 @@ body {
   transform-origin: 49% 20%;
 }
 
+.robin .splash {
+  transform-origin: 49% 25%;
+}
+
 .ruanmei .splash {
   transform-origin: 54% 33%;
 }
