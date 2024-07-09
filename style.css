@@ -251,6 +251,14 @@ body {
   transform-origin: 50% 20%;
 }
 
+.yunli .splash {
+  transform-origin: 53% 20%;
+}
+
+.jiaoqiu .splash {
+  transform-origin: 53% 22%;
+}
+
 .row > .col-3 {
   display: flex;
 }
